@@ -31,7 +31,7 @@ Agregaremos las extensiones de ESLint y Prettier, luego iran a la configuración
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "prettier.printWidth": 120
+  "prettier.printWidth": 80
 ```
 
 ## Migracion TSLint a ESLint Angular < v12
