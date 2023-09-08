@@ -1,0 +1,85 @@
+{
+  "root": true,
+  "ignorePatterns": ["projects/**/*"],
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@angular-eslint/recommended",
+        "plugin:@angular-eslint/template/process-inline-templates",
+        "plugin:prettier/recommended"
+      ],
+      "rules": {
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "type": "attribute",
+            "prefix": "app",
+            "style": "camelCase"
+          }
+        ],
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "prefix": "app",
+            "style": "kebab-case"
+          }
+        ],
+        "@angular-eslint/relative-url-prefix": ["error"],
+        "@angular-eslint/sort-ngmodule-metadata-arrays": ["error"],
+        "@angular-eslint/use-component-selector": ["error"],
+        "@angular-eslint/use-pipe-transform-interface": ["error"],
+        "@typescript-eslint/no-explicit-any": [
+          "error",
+          { "fixToUnknown": true }
+        ],
+        "@typescript-eslint/explicit-member-accessibility": [
+          "off",
+          {
+            "accessibility": "explicit"
+          }
+        ],
+        "@typescript-eslint/lines-between-class-members": [
+          "error",
+          "always",
+          { "exceptAfterSingleLine": true }
+        ],
+        "@typescript-eslint/no-non-null-assertion": "off",
+        "@typescript-eslint/explicit-function-return-type": "error",
+        "prettier/prettier": [
+          "error",
+          {
+            "endOfLine": "auto"
+          }
+        ],
+        "no-restricted-syntax": [
+          "error",
+          {
+            "selector": "Decorator[expression.callee.name=Injectable] Property[key.name=providedIn][value.value=root]",
+            "message": "Do not use `providedIn: root` in Injectables"
+          }
+        ],
+        "import/prefer-default-export": "off",
+        "no-use-before-define": "off",
+        "prefer-const": "off",
+        "no-console": "warn"
+      }
+    },
+    {
+      "files": ["*.html"],
+      "extends": ["plugin:@angular-eslint/template/recommended", "prettier"],
+      "plugins": ["prettier"],
+      "rules": {
+        "prettier/prettier": [
+          "error",
+          {
+            "endOfLine": "auto"
+          }
+        ]
+      }
+    }
+  ]
+}
