@@ -50,8 +50,6 @@ Cuando termine de ejecutar esos comandos ya puedes eliminar el archivo **_tslint
 ## Instalación EsLint Angular >= v12
 
 Esta configuración solo aplica si usas angular versión 12 o superior.
-AL momento de realizar este video la versión de esta librería para angular 14 es 14.0.2 pero si ustedes llegaran a presentar problemas al ejecutar el comando **ng lint**, usen la versión 14.0.0, ya que hay reportes de que a algunos les da error en la version 14.0.2.
-
 ```
 ng add @angular-eslint/schematics
 ```
